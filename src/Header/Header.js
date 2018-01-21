@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Filter from './Filter/Filter';
 import Search from './Search/Search';
 
@@ -6,7 +6,7 @@ const TMDB_LOGO = 'https://www.themoviedb.org/static_cache/v4/logos/408x161-powe
 
 const TMDB_WEBSITE= 'https://www.themoviedb.org/';
 
-const header = () => {
+const header = (props) => {
     return (
         <header className="row fixed-top">
           
@@ -16,7 +16,8 @@ const header = () => {
             </a>
           </div>
 
-          <Filter />
+          <Filter 
+            genresList={props.genresList} />
 
           <Search />
 

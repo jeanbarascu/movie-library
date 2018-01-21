@@ -12,11 +12,23 @@ import Footer from './Footer/Footer';
 
 class App extends Component {
 
+  constructor(props){
+    
+    super(props);
+    
+    this.state = {
+      movies: MoviesTMDB.results,
+      genres: GenresTMDB.genres
+    };
+
+  }
+
   render() {
     return (
       <div className="App">
         
-        <Header />
+        <Header
+          genresList={this.state.genres} />
 
         <Movies />
 
