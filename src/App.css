@@ -3,6 +3,9 @@
   --header-bg-color: #263238;
   --borders-color: #4CAF50;
   --text-color: #777;
+  --text-color-secondary: #81C784;
+  --links-color: #F44336;
+  --links-color-secondary: #EF5350;
 }
 
 html, body {
@@ -96,3 +99,26 @@ hr.split_info {
   background-color: var(--borders-color);
 }
 
+footer {
+  position:fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 1rem;
+  opacity: .6;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-color-secondary);
+  background-color: var(--header-bg-color);
+}
+
+footer a{
+  color: var(--links-color);
+  text-decoration: none;
+}
+
+footer a:hover, 
+footer a:active, 
+footer a:visited {
+  color: var(--links-color-secondary);
+  text-decoration: none;
+}
