@@ -17,6 +17,7 @@ header {
 
 .tmdb_logo {
   width: 10rem;
+  margin-left: 1rem;
 }
 
 #searchInput {
@@ -45,3 +46,53 @@ header {
   border-right:0 !important; 
   border-bottom:1px solid var(--borders-color);
 }
+
+.container-fluid {
+  margin-top: 7rem;
+}
+
+.card {
+  margin-bottom: 2rem;
+  border: 0;
+}
+
+.card p{
+  margin: 0;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.relese_date {
+  font-size: .8rem;
+}
+
+.votes {
+  font-size: 1.2rem;
+  opacity: 1;
+  text-align: right;
+}
+
+.genre {
+  font-size: .8rem;
+  font-style: italic;
+  opacity: .7;
+}
+
+.raiting {
+  font-size: 1.2rem;
+  opacity: 1;
+}
+
+.overview {
+  font-size: .8rem;
+  float: right;
+  background-color: var(--borders-color);
+}
+
+hr.split_info {
+  margin: 1rem auto;
+  background-color: var(--borders-color);
+}
+
