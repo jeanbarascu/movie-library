@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from 'react-moment';
 
 const MOVIE_POSTER_URL = 'http://image.tmdb.org/t/p/w342';
 
@@ -36,10 +37,12 @@ const movie = (props) => {
                           <div className="row">
                             <div className="col">
                               <p className="relese_date">
-                                <i className="fa fa-calendar" aria-hidden="true"></i> {movie.release_date}</p>
+                                <i className="fa fa-calendar" aria-hidden="true"></i> <Moment format="YYYY">
+                                  {movie.release_date}
+                                </Moment></p>
                             </div>
                             <div className="col">
-                              <a href='#' className="btn btn-success btn-sm overview">Overview</a>
+                              <a href='#' className="btn btn-success btn-xs overview">Overview</a>
                             </div>
                           </div>
 
