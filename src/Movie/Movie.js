@@ -3,6 +3,7 @@ import React from 'react';
 const MOVIE_POSTER_URL = 'http://image.tmdb.org/t/p/w342';
 
 const movie = (props) => {
+
     return(
         <div className="container-fluid">
           <div className="row">
@@ -26,7 +27,7 @@ const movie = (props) => {
 
                           <div className="row">
                             <div className="col">
-                              <p className="genre">Genre</p>
+                              <p className="genre">{props.getGenreName(movie.genre_ids)}</p>
                             </div>
                           </div>
 

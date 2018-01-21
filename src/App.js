@@ -27,9 +27,27 @@ class App extends Component {
 
   searchInputHandler = (event) => {
     this.setState({ searchByTitle: event.target.value.trim().toLowerCase() });
-  }
+  };
+
+  getGenreName = (ids = []) => {
+
+    let genre_name = [];
+
+    this.state.genres.forEach(genre => {
+      ids.forEach(id => {
+        if(id === genre.id){
+          genre_name.push(genre.name);
+        }
+      });
+    });
+
+    return genre_name.join(', ');
+
+  };
 
   render() {
+
+    this.getGenreName();
 
     let movieResults;
 
@@ -49,7 +67,8 @@ class App extends Component {
           searchInput={this.searchInputHandler} />
 
         <Movies
-            moviesList={movieResults} />
+            moviesList={movieResults}
+            getGenreName={this.getGenreName} />
 
         <Footer />
 
