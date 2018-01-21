@@ -1,7 +1,6 @@
 import React from 'react';
 
 const filter = (props) => {
-    console.log(props.genresList);
     return (
         <div className="col-sm-12 col-md-4 col-lg-3 col-xl-2">
             <select className='form-control' id='selectBox'>

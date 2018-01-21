@@ -30,7 +30,8 @@ class App extends Component {
         <Header
           genresList={this.state.genres} />
 
-        <Movies />
+        <Movies
+          moviesList={this.state.movies} />
 
         <Footer />
 

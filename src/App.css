@@ -64,7 +64,7 @@ header {
 }
 
 .card-title {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .relese_date {
@@ -104,7 +104,7 @@ footer {
   width: 100%;
   bottom: 0;
   padding: 1rem;
-  opacity: .6;
+  opacity: .9;
   text-align: center;
   font-size: 1.2rem;
   color: var(--text-color-secondary);
