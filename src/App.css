@@ -1,0 +1,47 @@
+:root {
+  --body-bg-color: #222;
+  --header-bg-color: #263238;
+  --borders-color: #4CAF50;
+  --text-color: #777;
+}
+
+html, body {
+  background-color: var(--body-bg-color);
+}
+
+header {
+  background-color: var(--header-bg-color);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tmdb_logo {
+  width: 10rem;
+}
+
+#searchInput {
+  width: 30rem;
+  margin-top: 1rem;
+  color: var(--text-color);
+  background-color: var(--header-bg-color);
+  border-radius: 0;
+  box-shadow: none;
+  border-top:0 !important; 
+  border-left:0 !important; 
+  border-right:0 !important; 
+  border-bottom:1px solid var(--borders-color);
+}
+
+#selectBox {
+  width: 12rem; 
+  margin-top: 1rem;
+  color: var(--text-color);
+  background-color: var(--header-bg-color);
+  border-radius: 0;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border-top:0 !important; 
+  border-left:0 !important; 
+  border-right:0 !important; 
+  border-bottom:1px solid var(--borders-color);
+}
