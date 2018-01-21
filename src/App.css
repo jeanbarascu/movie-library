@@ -52,6 +52,7 @@ header {
 
 .container-fluid {
   margin-top: 7rem;
+  margin-bottom: 3.5rem;
 }
 
 .card {
@@ -61,6 +62,10 @@ header {
 
 .card p{
   margin: 0;
+}
+
+.card-img-top img {
+  width: 50%;
 }
 
 .card-title {

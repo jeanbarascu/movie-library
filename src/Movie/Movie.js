@@ -1,19 +1,19 @@
 import React from 'react';
 import Moment from 'react-moment';
 
-const MOVIE_POSTER_URL = 'http://image.tmdb.org/t/p/w342';
+const MOVIE_POSTER_URL = 'https://image.tmdb.org/t/p/w342';
 
 const movie = (props) => {
 
     return(
         <div className="container-fluid">
-          <div className="row">
+          <div className="row movie_list">
               {props.moviesList.map(movie => {
                 return (
-                  <div className="col-sm-6 col-md-3 col-lg-2" key={movie.id}>
+                  <div className="col-sm-6 col-md-4 col-lg-3 col-xl-2" key={movie.id}>
                     <div className="card">
                       <img 
-                          className="card-img-top" 
+                          className="card-img-top"
                           src= {MOVIE_POSTER_URL + movie.poster_path} 
                           alt={movie.title} />
                       <div className="card-body">
