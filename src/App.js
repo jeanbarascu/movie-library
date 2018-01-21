@@ -29,6 +29,10 @@ class App extends Component {
     this.setState({ searchByTitle: event.target.value.trim().toLowerCase() });
   };
 
+  filterByGenreHandler = (event) => {
+    this.setState({filterByGenre: event.target.value});
+  }
+
   getGenreName = (ids = []) => {
 
     let genre_name = [];
@@ -49,14 +53,56 @@ class App extends Component {
 
     this.getGenreName();
 
-    let movieResults;
+    let movieResults = [];
 
     if(this.state.filterByGenre === 0) {
+      
       movieResults =
         this.state.movies
         .filter(movie => {
-          return (movie.title.trim().toLowerCase().indexOf(this.state.searchByTitle) !== -1); 
+          return movie.title.trim().toLowerCase().indexOf(this.state.searchByTitle) !== -1; 
         });
+
+    } 
+    
+    if(this.state.filterByGenre !== 0 && this.state.searchByTitle === '') {
+
+      movieResults = 
+        this.state.movies
+        .filter(movie => {
+          let hasGenre = false;
+          movie.genre_ids.forEach(genre => {
+            if(genre == this.state.filterByGenre){
+              hasGenre = true;
+            }
+          });
+          return hasGenre;
+        });
+
+    }
+
+    if(this.state.filterByGenre !== 0 && this.state.searchByTitle !== '') {
+      
+      let movieResultsAfterFilter;
+      
+      movieResultsAfterFilter = 
+        this.state.movies
+        .filter(movie => {
+          let hasGenre = false;
+          movie.genre_ids.forEach(genre => {
+            if(genre == this.state.filterByGenre){
+              hasGenre = true;
+            }
+          });
+          return hasGenre;
+        });
+
+        movieResults =
+          movieResultsAfterFilter
+          .filter(movie => {
+            return movie.title.trim().toLowerCase().indexOf(this.state.searchByTitle) !== -1; 
+          });
+            
     }
 
     return (
@@ -64,7 +110,8 @@ class App extends Component {
         
         <Header
           genresList={this.state.genres}
-          searchInput={this.searchInputHandler} />
+          searchInput={this.searchInputHandler}
+          filterInput={this.filterByGenreHandler} />
 
         <Movies
             moviesList={movieResults}

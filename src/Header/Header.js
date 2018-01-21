@@ -17,7 +17,8 @@ const header = (props) => {
           </div>
 
           <Filter 
-            genresList={props.genresList} />
+            genresList={props.genresList}
+            changed={props.filterInput} />
 
           <Search
             changed={props.searchInput} />
