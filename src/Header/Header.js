@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Filter from './Filter/Filter';
 import Search from './Search/Search';
 
@@ -19,7 +19,8 @@ const header = (props) => {
           <Filter 
             genresList={props.genresList} />
 
-          <Search />
+          <Search
+            changed={props.searchInput} />
 
         </header>
     );

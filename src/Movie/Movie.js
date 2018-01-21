@@ -8,7 +8,7 @@ const movie = (props) => {
           <div className="row">
               {props.moviesList.map(movie => {
                 return (
-                  <div className="col-sm-6 col-md-3 col-lg-2">
+                  <div className="col-sm-6 col-md-3 col-lg-2" key={movie.id}>
                     <div className="card">
                       <img 
                           className="card-img-top" 

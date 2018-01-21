@@ -1,6 +1,6 @@
 import React from 'react';
 
-const search = () => {
+const search = (props) => {
     return (
         <div className="col-sm-12 col-md-5 col-lg-3 col-xl-2">
             <input        
@@ -9,7 +9,8 @@ const search = () => {
                 type="text"
                 placeholder="Search by title"
                 autoComplete="off"
-                autoFocus="true" />
+                autoFocus="true"
+                onChange={props.changed} />
         </div>
     );
 };

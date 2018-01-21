@@ -18,20 +18,38 @@ class App extends Component {
     
     this.state = {
       movies: MoviesTMDB.results,
-      genres: GenresTMDB.genres
+      genres: GenresTMDB.genres,
+      searchByTitle: '',
+      filterByGenre: 0
     };
 
   }
 
+  searchInputHandler = (event) => {
+    this.setState({ searchByTitle: event.target.value.trim().toLowerCase() });
+  }
+
   render() {
+
+    let movieResults;
+
+    if(this.state.filterByGenre === 0) {
+      movieResults =
+        this.state.movies
+        .filter(movie => {
+          return (movie.title.trim().toLowerCase().indexOf(this.state.searchByTitle) !== -1); 
+        });
+    }
+
     return (
       <div className="App">
         
         <Header
-          genresList={this.state.genres} />
+          genresList={this.state.genres}
+          searchInput={this.searchInputHandler} />
 
         <Movies
-          moviesList={this.state.movies} />
+            moviesList={movieResults} />
 
         <Footer />
 
