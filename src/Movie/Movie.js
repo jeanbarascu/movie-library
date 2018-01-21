@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Movie = () => {
+const movie = () => {
     return(
         <div className="container-fluid">
           <div className="col-sm-6 col-md-3 col-lg-2">
@@ -55,4 +55,4 @@ const Movie = () => {
     );
 }
 
-export default Movie;
+export default movie;
