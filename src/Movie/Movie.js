@@ -7,6 +7,7 @@ const movie = (props) => {
 
     return(
         <div className="container-fluid">
+
           <div className="row movie_list">
               {props.moviesList.map(movie => {
                 return (
@@ -37,7 +38,7 @@ const movie = (props) => {
                           <div className="row">
                             <div className="col">
                               <p className="relese_date">
-                                <i className="fa fa-calendar" aria-hidden="true"></i> <Moment format="YYYY">
+                                <i className="fa fa-calendar" aria-hidden="true"></i> <Moment format="MM/DD/YYYY">
                                   {movie.release_date}
                                 </Moment></p>
                             </div>
