@@ -1,6 +1,8 @@
 import React from 'react';
 import Moment from 'react-moment';
 
+
+const MOVIE_DETAILS_URL = 'https://www.themoviedb.org/movie/';
 const MOVIE_POSTER_URL = 'https://image.tmdb.org/t/p/w342';
 
 const movie = (props) => {
@@ -18,46 +20,34 @@ const movie = (props) => {
                           src= {MOVIE_POSTER_URL + movie.poster_path} 
                           alt={movie.title} />
                       <div className="card-body">
-                          
-                          <div className="row">
-                            <div className="col">
-                              <p className="card-title">{movie.title}</p>
-                            </div>
+                        <div className="row">
+                          <div className="col">
+                            <p>
+                            <i className="fa fa-calendar" aria-hidden="true"></i> <Moment format="MM/DD/YYYY">
+                              {movie.release_date}
+                            </Moment></p>
                           </div>
-
-                          <hr className="split_info" />
-
-                          <div className="row">
-                            <div className="col">
-                              <p className="genre">{props.getGenreName(movie.genre_ids)}</p>
-                            </div>
+                          <div className="col">
+                            <p className="rating">{movie.vote_average} <i className="fa fa-star fa-6" aria-hidden="true"></i></p>
                           </div>
-
-                          <hr className="split_info" />
-                          
-                          <div className="row">
-                            <div className="col">
-                              <p className="relese_date">
-                                <i className="fa fa-calendar" aria-hidden="true"></i> <Moment format="MM/DD/YYYY">
-                                  {movie.release_date}
-                                </Moment></p>
-                            </div>
-                            <div className="col">
-                              <a href='#' className="btn btn-success btn-xs overview">Overview</a>
-                            </div>
+                        </div>
+                      </div>
+                      <div className="genres">
+                        <div className="row">
+                          <div className="col">
+                            <p className="genre">{props.getGenreName(movie.genre_ids)}</p>
                           </div>
-
-                          <hr className="split_info" />
-
-                          <div className="row">
-                            <div className="col">
-                              <p className="raiting">{movie.vote_average} <i className="fa fa-star fa-6" aria-hidden="true"></i></p>
-                            </div>
-                            <div className="col">
-                              <p className="votes">Votes: {movie.vote_count}</p>
-                            </div>
+                        </div>
+                      </div>
+                      <div className="overview">
+                        <div className="row">
+                          <div className="col">
+                            <a 
+                              href={MOVIE_DETAILS_URL + movie.id}
+                              target='_blank'
+                              rel="noopener noreferrer">Overview</a>
                           </div>
-
+                        </div>
                       </div>
                   </div>
                   </div>

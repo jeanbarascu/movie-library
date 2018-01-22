@@ -1,15 +1,19 @@
 :root {
   --body-bg-color: #222;
+  --green-bg-color: #4CAF50;
   --header-bg-color: #263238;
   --borders-color: #4CAF50;
-  --text-color: #777;
+  --text-color: #222;
   --text-color-secondary: #81C784;
+  --input-text-color: #777;
   --links-color: #F44336;
   --links-color-secondary: #EF5350;
+  --basic-font: 'Quicksand', sans-serif;
 }
 
 html, body {
   background-color: var(--body-bg-color);
+  font-family: var(--basic-font);
 }
 
 header {
@@ -26,7 +30,8 @@ header {
 #searchInput {
   width: 30rem;
   margin-top: 1rem;
-  color: var(--text-color);
+  color: var(--text-color-secondary);
+  font-size: 1.2rem;
   background-color: var(--header-bg-color);
   border-radius: 0;
   box-shadow: none;
@@ -39,7 +44,8 @@ header {
 #selectBox {
   width: 12rem; 
   margin-top: 1rem;
-  color: var(--text-color);
+  font-size: 1.2rem;
+  color: #777;
   background-color: var(--header-bg-color);
   border-radius: 0;
   -webkit-appearance: none;
@@ -64,44 +70,48 @@ header {
   margin: 0;
 }
 
-.card-img-top img {
-  width: 50%;
+.card-body {
+  background-color: var(--header-bg-color);
+  color: var(--text-color-secondary);
+  font-size: 1rem;
 }
 
-.card-title {
-  font-size: 1.1rem;
+.card-body.rating {
+  font-weight: bold;
 }
 
-.relese_date {
-  font-size: .8rem;
-}
-
-.votes {
-  font-size: 1.2rem;
-  opacity: 1;
+.rating{
   text-align: right;
+  font-size: 2rem;
 }
 
-.genre {
-  font-size: .8rem;
+.genres {
+  background-color: #263238;
+  font-size: .9rem;
   font-style: italic;
-  opacity: .7;
-}
-
-.raiting {
-  font-size: 1.2rem;
-  opacity: 1;
+  color: #fff;
+  text-align: right;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #fff;
 }
 
 .overview {
-  font-size: .8rem;
-  float: right;
-  background-color: var(--borders-color);
+  background-color: var(--green-bg-color);
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
 }
 
-hr.split_info {
-  margin: 1rem auto;
-  background-color: var(--borders-color);
+.overview a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.overview a:hover {
+  color: #222;
+  text-decoration: none;
 }
 
 footer {
