@@ -89,7 +89,7 @@ class App extends Component {
 
     let movieResults = [];
 
-    if(this.state.filterByGenre === 0) {
+    if(parseInt(this.state.filterByGenre, 0) === 0) {
       
       movieResults =
         this.state.movies
@@ -97,9 +97,13 @@ class App extends Component {
           return movie.title.trim().toLowerCase().indexOf(this.state.searchByTitle) !== -1; 
         });
 
-    } else {
+    }
+    
+    if(parseInt(this.state.filterByGenre, 0) !== 0) {
 
-      movieResults = 
+      let movieResultsAfterFilter;
+
+      movieResultsAfterFilter = 
         this.state.movies
         .filter(movie => {
           let hasGenre = false;
@@ -110,6 +114,12 @@ class App extends Component {
           });
           return hasGenre;
         });
+
+        movieResults =
+          movieResultsAfterFilter
+          .filter(movie => {
+            return movie.title.trim().toLowerCase().indexOf(this.state.searchByTitle) !== -1; 
+          });
 
     }
 

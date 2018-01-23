@@ -1,3 +1,9 @@
+/* Hide scrollbar for Chrome and Safari users */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Define CSS variables */
 :root {
   --body-bg-color: #222;
   --green-bg-color: #4CAF50;
