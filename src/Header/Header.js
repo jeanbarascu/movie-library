@@ -25,7 +25,7 @@ const header = (props) => {
             changed={props.searchInput} />
 
           <div className="col-sm-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
-            <p className="total_movies">{props.numberOfMovies} movies in your list</p>
+            <p className="total_movies">{props.numberOfMovies} movies watched</p>
           </div>
 
         </header>

@@ -5,9 +5,9 @@
 
 /* Define CSS variables */
 :root {
-  --body-bg-color: #222;
+  --body-bg-color: #eee;
   --green-bg-color: #00d389;
-  --header-bg-color: #263238;
+  --header-bg-color: #081c24;
   --borders-color: #00d389;
   --text-color: #222;
   --text-color-secondary: #81C784;
@@ -73,7 +73,7 @@ header {
 }
 
 .container-fluid {
-  margin-top: 7rem;
+  margin-top: 8rem;
   margin-bottom: 3.5rem;
 }
 
@@ -140,7 +140,7 @@ header {
   font-style: italic;
   font-weight: bold;
   color: #222;
-  text-align: right;
+  text-align: center;
   padding: 1rem 1rem;
 }
 
