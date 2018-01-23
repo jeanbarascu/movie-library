@@ -189,6 +189,10 @@ footer a:visited {
 
 @media (max-width: 767px) {
 
+  body{
+    cursor: pointer;
+  }
+
   header {
     padding: .5rem;
     margin: 0;
@@ -230,6 +234,10 @@ footer a:visited {
   .card {
     margin-bottom: 1rem;
   }
+
+  .poster_container:active .overlay {
+    opacity: .9;
+  }
   
   .card-body {
     font-size: .9rem;
@@ -258,6 +266,9 @@ footer a:visited {
 
 @media (min-width: 768px) and (max-width: 1023px) {
 
+  body{
+    cursor: pointer;
+  }
   header {
     padding: .5rem;
     margin: 0;
@@ -298,6 +309,10 @@ footer a:visited {
     margin-bottom: 1.5rem;
   }
 
+  .poster_container:active .overlay {
+    opacity: .9;
+  }
+
   .text {
     font-size: .7rem;
   }
@@ -329,6 +344,10 @@ footer a:visited {
 }
 
 @media (min-width: 1024px) and (max-width: 1439px) {
+
+  body {
+    cursor: pointer;
+  }
 
   header {
     padding: .5rem;
@@ -368,6 +387,10 @@ footer a:visited {
   
   .card {
     margin-bottom: 1.5rem;
+  }
+
+  .poster_container:active .overlay {
+    opacity: .9;
   }
 
   .text {
