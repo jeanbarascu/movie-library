@@ -75,6 +75,14 @@ class App extends Component {
 
   };
 
+  trimGenreString = (genre) => {
+    if(genre.length > 25){
+      return genre.substring(0, 25) + ' ...';
+    } else {
+      return genre;
+    }
+  };
+
   render() {
 
     this.getGenreName();
@@ -96,7 +104,7 @@ class App extends Component {
         .filter(movie => {
           let hasGenre = false;
           movie.genre_ids.forEach(genre => {
-            if(genre === parseInt(this.state.filterByGenre)){
+            if(genre === parseInt(this.state.filterByGenre, 0)){
               hasGenre = true;
             }
           });
@@ -115,7 +123,8 @@ class App extends Component {
 
         <Movies
             moviesList={movieResults}
-            getGenreName={this.getGenreName} />
+            getGenreName={this.getGenreName}
+            trimGenre={this.trimGenreString} />
 
         <Footer />
 

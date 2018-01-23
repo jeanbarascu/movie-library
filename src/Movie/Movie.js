@@ -35,7 +35,7 @@ const movie = (props) => {
                       <div className="genres">
                         <div className="row">
                           <div className="col">
-                            <p className="genre">{props.getGenreName(movie.genre_ids)}</p>
+                            <a title={props.getGenreName(movie.genre_ids)} className="genre">{props.trimGenre(props.getGenreName(movie.genre_ids))}</a>
                           </div>
                         </div>
                       </div>
