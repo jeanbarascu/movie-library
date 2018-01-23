@@ -20,18 +20,18 @@ const movie = (props) => {
                             className="card-img-top"
                             src= {MOVIE_POSTER_URL + movie.poster_path} 
                             alt={movie.title} />
-                        <div class="overlay">
+                        <div className="overlay">
                           <div className="overview">
                               <div className="row">
                                 <div className="col">
                                   <a 
                                     href={MOVIE_DETAILS_URL + movie.id}
                                     target='_blank'
-                                    rel="noopener noreferrer"> <i class="fa fa-film fa-6" aria-hidden="true"></i> More Info</a>
+                                    rel="noopener noreferrer"> <i className="fa fa-film fa-6" aria-hidden="true"></i> More Info</a>
                                 </div>
                               </div>
                           </div>    
-                          <div class="text truncate">{props.truncate(movie.overview, 580)}</div>
+                          <div className="text truncate">{props.truncate(movie.overview, 580)}</div>
                         </div>
                       </div>
                       <div className="card-body">

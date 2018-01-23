@@ -7,6 +7,7 @@ const TMDB_LOGO = 'https://www.themoviedb.org/static_cache/v4/logos/408x161-powe
 const TMDB_WEBSITE= 'https://www.themoviedb.org/';
 
 const header = (props) => {
+
     return (
         <header className="row fixed-top">
           
@@ -22,6 +23,10 @@ const header = (props) => {
 
           <Search
             changed={props.searchInput} />
+
+          <div className="col-sm-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+            <p className="total_movies">{props.numberOfMovies} movies in your list</p>
+          </div>
 
         </header>
     );

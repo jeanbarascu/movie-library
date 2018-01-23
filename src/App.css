@@ -6,9 +6,9 @@
 /* Define CSS variables */
 :root {
   --body-bg-color: #222;
-  --green-bg-color: #4CAF50;
+  --green-bg-color: #00d389;
   --header-bg-color: #263238;
-  --borders-color: #4CAF50;
+  --borders-color: #00d389;
   --text-color: #222;
   --text-color-secondary: #81C784;
   --input-text-color: #777;
@@ -16,6 +16,8 @@
   --links-color-secondary: #EF5350;
   --basic-font: 'Quicksand', sans-serif;
 }
+
+
 
 html, body {
   background-color: var(--body-bg-color);
@@ -26,6 +28,7 @@ header {
   background-color: var(--header-bg-color);
   padding: 1rem;
   margin-bottom: 2rem;
+  opacity: .9;
 }
 
 .tmdb_logo {
@@ -60,6 +63,13 @@ header {
   border-left:0 !important; 
   border-right:0 !important; 
   border-bottom:1px solid var(--borders-color);
+}
+
+.total_movies {
+  color: #00d389;
+  font-size: 2rem;
+  margin-top: .5rem;
+  text-align: right;
 }
 
 .container-fluid {
@@ -128,7 +138,8 @@ header {
   background-color: var(--green-bg-color);
   font-size: .9rem;
   font-style: italic;
-  color: #fff;
+  font-weight: bold;
+  color: #222;
   text-align: right;
   padding: 1rem 1rem;
 }
@@ -204,8 +215,15 @@ footer a:visited {
     font-size: 1rem;
   }
 
+  .total_movies {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: .3rem;
+    margin-bottom: 0;
+  }
+
   .container-fluid {
-    margin-top: 11rem;
+    margin-top: 13rem;
     margin-bottom: 1.5rem;
   }
   
@@ -263,8 +281,16 @@ footer a:visited {
     font-size: .9rem;
   }
 
+  .total_movies {
+    font-size: 1rem;
+    text-align: right;
+    margin-top: .3rem;
+    margin-bottom: 0;
+    margin-right: .5rem;
+  }
+
   .container-fluid {
-    margin-top: 4.5rem;
+    margin-top: 6.5rem;
     margin-bottom: 2rem;
   }
   
@@ -325,6 +351,14 @@ footer a:visited {
     width: 100%;
     margin-top: .2rem;;
     font-size: 1rem;
+  }
+
+  .total_movies {
+    font-size: 1.5rem;
+    text-align: right;
+    margin-top: .3rem;
+    margin-bottom: 0;
+    margin-right: .5rem;
   }
 
   .container-fluid {

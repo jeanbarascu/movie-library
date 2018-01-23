@@ -23,6 +23,7 @@ class App extends Component {
     // set the initial state of the component
     this.state = {
       movies: [],
+      numberOfMovies: 0,
       genres: [],
       searchByTitle: '',
       filterByGenre: 0
@@ -35,7 +36,7 @@ class App extends Component {
     // Make a request to TMDB API to retrieve my movie list
     Axios.get(BASE_URL_MOVIES + MY_MOVIES_LIST_ID + '?api_key=' + API_KEY)
     .then(response => {
-      this.setState({movies: response.data.items});
+      this.setState({movies: response.data.items, numberOfMovies: response.data.items.length});
     })
     .catch(error => {
       console.log(error);
@@ -49,6 +50,7 @@ class App extends Component {
     .catch(error => {
       console.log(error);
     });
+    
   }
 
   searchInputHandler = (event) => {
@@ -84,8 +86,6 @@ class App extends Component {
   };
 
   render() {
-
-    this.getGenreName();
 
     let movieResults = [];
 
@@ -129,7 +129,8 @@ class App extends Component {
         <Header
           genresList={this.state.genres}
           searchInput={this.searchInputHandler}
-          filterInput={this.filterByGenreHandler} />
+          filterInput={this.filterByGenreHandler}
+          numberOfMovies={this.state.numberOfMovies} />
 
         <Movies
             moviesList={movieResults}
