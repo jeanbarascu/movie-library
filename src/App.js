@@ -75,11 +75,11 @@ class App extends Component {
 
   };
 
-  trimGenreString = (genre) => {
-    if(genre.length > 25){
-      return genre.substring(0, 25) + ' ...';
+  truncateText = (text, length) => {
+    if(text.length > length){
+      return text.substring(0, length) + ' ...';
     } else {
-      return genre;
+      return text;
     }
   };
 
@@ -134,7 +134,7 @@ class App extends Component {
         <Movies
             moviesList={movieResults}
             getGenreName={this.getGenreName}
-            trimGenre={this.trimGenreString} />
+            truncate={this.truncateText} />
 
         <Footer />
 
