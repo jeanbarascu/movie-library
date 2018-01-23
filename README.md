@@ -21,7 +21,7 @@ MOVIE LIBRARY APP is a responsive [React](http://facebook.github.io/react/index.
 
 If you would like to download the code and try it for yourself:
 
-1. Clone the repo: `git@github.com:SKempin/reactjs-tmdb-app.git`
+1. Clone the repo: `https://github.com/jeanbarascu/movie-library`
 2. `cd movie-library`
 3. Install packages: `npm install`
 4. Build project and launch: `npm start`, and the browser will open a new tab on `http://localhost:3000`
