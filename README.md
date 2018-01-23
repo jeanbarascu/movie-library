@@ -4,7 +4,7 @@
 
 MOVIE LIBRARY APP is a responsive [React](http://facebook.github.io/react/index.html) SPA. Data is loaded via [The Movie Database (TMDb) API](https://www.themoviedb.org/documentation/api).
 
-![](https://github.com/jeanbarascu/movie-library/tree/master/public/movie-library-print-screen.jpg)
+![](https://github.com/jeanbarascu/movie-library/blob/master/public/movie-library-print-screen.jpg)
 
 ## Demo
 [Movie Library App - Live DEMO](https://jeanbarascu.github.io/movie-library/)
