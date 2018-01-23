@@ -30,7 +30,7 @@ header {
 
 .tmdb_logo {
   width: 10rem;
-  margin-left: 1rem;
+  margin-left: .5rem;
 }
 
 #searchInput {
@@ -142,4 +142,184 @@ footer a:active,
 footer a:visited {
   color: var(--links-color-secondary);
   text-decoration: none;
+}
+
+@media (max-width: 767px) {
+
+  header {
+    padding: .5rem;
+    margin: 0;
+    opacity: .8;
+  }
+
+  .tmdb_logo {
+    width: 6rem;
+    margin: 0;
+    float: right;
+  }
+
+  #searchInput {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+  }
+  
+  #selectBox {
+    width: 100%; 
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  .container-fluid {
+    margin-top: 11rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  .card-body {
+    font-size: .9rem;
+  }
+
+  .rating{
+    font-size: 1.5rem;
+  }
+
+  .genres{
+    font-size: .8rem;
+    padding: .5rem 1.5rem;
+  }
+
+  .overview{
+    font-size: .8rem;
+    padding: .5rem;
+  }
+
+  footer {
+    padding: .1rem;
+    font-size: 1rem
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  header {
+    padding: .5rem;
+    margin: 0;
+    opacity: .8;
+  }
+
+  .tmdb_logo {
+    width: 6rem;
+    margin: 0 .5rem;
+  }
+
+  #searchInput {
+    width: 98%;
+    font-size: .9rem; 
+    margin-top: .2rem;
+  }
+  
+  #selectBox {
+    width: 100%;
+    margin-top: 0;
+    font-size: .9rem;
+  }
+
+  .container-fluid {
+    margin-top: 4.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-body {
+    font-size: .7rem;
+  }
+
+  .rating{
+    font-size: 1.3rem;
+  }
+
+  .genres{
+    font-size: .7rem;
+    padding: .5rem 1.5rem;
+  }
+
+  .overview{
+    font-size: .7rem;
+    padding: .5rem;
+  }
+
+  footer {
+    padding: .3rem;
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+  header {
+    padding: .5rem;
+    margin: 0;
+    opacity: .8;
+  }
+
+  .tmdb_logo {
+    width: 6rem;
+    margin: 0 .5rem;
+  }
+
+  #searchInput {
+    width: 98%;
+    font-size: 1rem; 
+    margin-top: .2rem;
+  }
+  
+  #selectBox {
+    width: 100%;
+    margin-top: .2rem;;
+    font-size: 1rem;
+  }
+
+  .container-fluid {
+    margin-top: 4.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-body {
+    font-size: .7rem;
+  }
+
+  .rating{
+    font-size: 1.5rem;
+  }
+
+  .genres{
+    font-size: .7rem;
+    padding: .5rem 1.5rem;
+  }
+
+  .overview{
+    font-size: .7rem;
+    padding: .5rem;
+  }
+
+  footer {
+    padding: .3rem;
+    font-size: 1rem;
+  }
+
 }

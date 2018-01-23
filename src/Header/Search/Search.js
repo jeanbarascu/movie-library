@@ -2,7 +2,7 @@ import React from 'react';
 
 const search = (props) => {
     return (
-        <div className="col-sm-12 col-md-5 col-lg-3 col-xl-2">
+        <div className="col-xs-12 col-sm-12 col-md-7 col-lg-4 col-xl-4">
             <input        
                 className="form-control" 
                 id="searchInput"

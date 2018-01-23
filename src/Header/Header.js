@@ -10,7 +10,7 @@ const header = (props) => {
     return (
         <header className="row fixed-top">
           
-          <div className="col-sm-12 col-md-3 col-lg-2 col-xl-2">
+          <div className="col-sm-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
             <a href={TMDB_WEBSITE} target="_blank" rel="noopener noreferrer">
               <img className="tmdb_logo" src={TMDB_LOGO} alt="The Movie Database Logo" />
             </a>
