@@ -54,16 +54,6 @@ const movie = (props) => {
                           </div>
                         </div>
                       </div>
-                      {/* <div className="overview">
-                        <div className="row">
-                          <div className="col">
-                            <a 
-                              href={MOVIE_DETAILS_URL + movie.id}
-                              target='_blank'
-                              rel="noopener noreferrer">Overview</a>
-                          </div>
-                        </div>
-                      </div> */}
                   </div>
                   </div>
                 );

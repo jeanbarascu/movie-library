@@ -125,13 +125,12 @@ header {
 }
 
 .genres {
-  background-color: #263238;
+  background-color: var(--green-bg-color);
   font-size: .9rem;
   font-style: italic;
   color: #fff;
   text-align: right;
-  padding: 1rem 1.5rem;
-  border-top: 1px solid #fff;
+  padding: 1rem 1rem;
 }
 
 .overview {
@@ -272,10 +271,15 @@ footer a:visited {
   .card {
     margin-bottom: 1.5rem;
   }
+
+  .text {
+    font-size: .7rem;
+  }
   
   .card-body {
     font-size: .7rem;
   }
+  
 
   .rating{
     font-size: 1.3rem;
@@ -330,6 +334,10 @@ footer a:visited {
   
   .card {
     margin-bottom: 1.5rem;
+  }
+
+  .text {
+    font-size: .7rem;
   }
   
   .card-body {
